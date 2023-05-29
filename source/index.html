@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- BOOTSTRAP & FONTS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/logo.jpeg">
+
+  <title>Dunia Film</title>
+</head>
+
+<body>
+  <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="" style="width: 89px; height: 50px;"></a>
+
+      <div id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-medium">
+          <li class="nav-item">
+            <a class="nav-link text-left text-white fs-6" href="help.html">
+              <i class="fa fa-question-circle" aria-hidden="true"></i> Bantuan</a>
+          </li>
+        </ul>
+
+      </div>
+      <form id="mySearchForm" class="d-flex" action="search.php" method="get">
+        <input class="form-control me-2 outline-danger" type="text"
+          placeholder="Cari FILM / ARTIS / SUTRADARA / STUDIO hanya di Dunia Film" aria-label="Search" name="search"
+          required>
+        <button id="mySearchButton" class="btn btn-outline-light" type="submit" name="submit"><span><i
+              class="fa fa-search" aria-hidden="true"></i></span><span id="mySearchButtonText" class="fs-6">
+            Cari</span></button>
+      </form>
+    </div>
+  </nav>
+
+  <!--HOME/CAROUSEL-->
+  <section id="home" class="pb-3 d-none d-md-block">
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
+      style="max-width: 100vw; margin: 0 auto;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="fdetail.php?id=10002">
+            <img src="img/poster1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Dear Nathan: Thank You Salma</h5>
+              <p>Masa paling romantis hubungan Nathan dan Salma baru saja dimulai. Tahun ini, mereka mulai memasuki
+                dunia
+                aktivisme sosial. Sayangnya...</p>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="fdetail.php?id=10003">
+            <img src="img/poster2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Teluh</h5>
+              <p>Teluh menceritakan mengenai sebuah teror yang berawal dari pembunuhan seorang bernama Yulia. Ia
+                merupakan...</p>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="fdetail.php?id=10001">
+            <img src="img/poster3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>KKN di Desa Penari</h5>
+              <p>Diambil dari sebuah kisah nyata, sekelompok mahasiswa yang tengah melakukan program kerja nyata di Desa
+                Penari. Tak berjalan mulus, serentetan...</p>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="fdetail.php?id=10011">
+            <img src="img/poster4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>The Other Side</h5>
+              <p>Alea seorang remaja 16 tahun memutuskan untuk pindah dari Jakarta ke Bandung, karena ingin melupakan...
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="fdetail.php?id=10004">
+            <img src="img/poster5.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Pengabdi Setan 2: Komuni</h5>
+              <p>SEGERA HADIR</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+
+
+  <!--CONTENT/TABS-->
+  <section id="content" class="px-5 py-2">
+    <ul class="nav nav-pills mb-3 nav-justified" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active fs-5" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+          type="button" role="tab" aria-controls="pills-home" aria-selected="true">Film</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link fs-5" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+          type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Artis</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link fs-5" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+          type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Genre</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <h1 class="text-center py-4">Film Terpopuler Tahun Ini</h1>
+        <div class="container-fluid">
+          <div class="row gx-3 gy-3">
+            <div class="col">
+              <div class="card home_card">
+                <a href="fdetail.php?id=10001">
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BYjBjM2Y5YWEtNTgyMi00MzcwLThkYTctYzZmY2FkNjZjZTRjXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    </i>
+                    <h5 class="card-title">KKN di Desa Penari<br>&nbsp;</h5>
+                    <span class="badge rounded-pill bg-danger">Horor</span>
+                    <span class="card_info float-end"><i class="fa fa-clock-o" aria-hidden="true"></i> 121 m</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card home_card">
+                <a href="fdetail.php?id=10002">
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BNmQxZDNjYjUtZGU5MC00ZTI0LWIyMTAtMmJjODJiNjQzODkzXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    </i>
+                    <h5 class="card-title">Dear Nathan: Thank You Salma</h5>
+                    <span class="badge rounded-pill bg-warning">Drama</span>
+                    <span class="card_info float-end"><i class="fa fa-clock-o" aria-hidden="true"></i> 112 m</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card home_card">
+                <a href="fdetail.php?id=10003">
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BNTNmZjZkM2YtN2YxNC00MGU3LTlmZDAtNTQ3MDM1NmNjMjgzXkEyXkFqcGdeQXVyNDE4MTcxMTg@._V1_.jpg"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    </i>
+                    <h5 class="card-title">Teluh<br>&nbsp;</h5>
+                    <span class="badge rounded-pill bg-danger">Misteri</span>
+                    <span class="card_info float-end"><i class="fa fa-clock-o" aria-hidden="true"></i> 101 m</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card home_card">
+                <a href="fdetail.php?id=10004">
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BOWUzMzY4ZjQtOGYzMC00Y2RjLWE4MTItNTY1ODc0MGVjMzhkXkEyXkFqcGdeQXVyNTg2MDI2Njc@._V1_.jpg"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    </i>
+                    <h5 class="card-title">Pengabdi Setan 2: Komuni</h5>
+                    <span class="badge rounded-pill bg-danger">Horor</span>
+                    <span class="card_info float-end"><i class="fa fa-clock-o" aria-hidden="true"></i> ?</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card home_card">
+                <a href="fdetail.php?id=10005">
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BMmMwNjJjODItNjIxZi00ZDk2LTg3OGItMmMyYWIzYjJkZmU0XkEyXkFqcGdeQXVyNzY4NDQzNTg@._V1_FMjpg_UX1000_.jpg"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    </i>
+                    <h5 class="card-title">Walking Dead Tomate<br>&nbsp;</h5>
+                    <span class="badge rounded-pill bg-danger">Horor</span>
+                    <span class="card_info float-end"><i class="fa fa-clock-o" aria-hidden="true"></i> 79 m</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card home_card">
+                <a href="fdetail.php?id=10006">
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BODkxZjUxZWUtODE4Yy00M2YzLTgxNGEtZmI0ZWIyN2MzNWI3XkEyXkFqcGdeQXVyMTQzNDMzOTE5._V1_.jpg"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    </i>
+                    <h5 class="card-title">Baby Blues<br>&nbsp;</h5>
+                    <span class="badge rounded-pill bg-info">Komedi</span>
+                    <span class="card_info float-end"><i class="fa fa-clock-o" aria-hidden="true"></i> 100 m</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card home_card">
+                <a href="fdetail.php?id=10007">
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BOGEyM2U5OTAtOTk5YS00YTU1LWFmYWEtZGU1MjMzMjIzMzRlXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    </i>
+                    <h5 class="card-title">Pelangi Tanpa Warna<br>&nbsp;</h5>
+                    <span class="badge rounded-pill bg-success">Keluarga</span>
+                    <span class="card_info float-end"><i class="fa fa-clock-o" aria-hidden="true"></i> 82 m</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card home_card">
+                <a href="fdetail.php?id=10008">
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BY2Q2OWUwMjAtNDA2NC00NDQwLWFkMDAtZGEyYzVjMDZkNzhiXkEyXkFqcGdeQXVyNzY4NDQzNTg@._V1_FMjpg_UX1000_.jpg"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    </i>
+                    <h5 class="card-title">Bus Om Bebek<br>&nbsp;</h5>
+                    <span class="badge rounded-pill bg-success">Keluarga</span>
+                    <span class="card_info float-end"><i class="fa fa-clock-o" aria-hidden="true"></i> ?</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card home_card">
+                <a href="fdetail.php?id=10009">
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BMjM4NmQzYzItNWM5YS00YTYwLTliYjYtZjZlNmNjYzQ1ODljXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    </i>
+                    <h5 class="card-title">Arini by Love.inc<br>&nbsp;</h5>
+                    <span class="badge rounded-pill bg-warning">Drama</span>
+                    <span class="card_info float-end"><i class="fa fa-clock-o" aria-hidden="true"></i> 70 m</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card home_card">
+                <a href="fdetail.php?id=10010">
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BOGE2MDQ1ZjAtYzQxNC00NDAyLWE2YzEtNThjZGQ3MjM1OTAxXkEyXkFqcGdeQXVyNzY4NDQzNTg@._V1_FMjpg_UX1000_.jpg"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    </i>
+                    <h5 class="card-title">Ada Mertua di Rumahku</h5>
+                    <span class="badge rounded-pill bg-warning">Drama</span>
+                    <span class="card_info float-end"><i class="fa fa-clock-o" aria-hidden="true"></i> 79 m</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <h1 class="text-center py-4">Artis Terpopuler Tahun Ini</h1>
+        <div class="container-fluid">
+          <div class="row gx-3 justify-content-between">
+            <div class="col my-4">
+              <a href="pdetail.php?id=871">
+                <div class="home_person_image">
+                  <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2021/12/25/2745459427.jpg" alt=""
+                    class="home_person_img">
+                  <p class="home_person_text fs-4 fw-bold fw-bold">Jefri<br>Nichol</p>
+                </div>
+              </a>
+            </div>
+            <div class="col my-4">
+              <a href="pdetail.php?id=114">
+                <div class="home_person_image">
+                  <img
+                    src="https://1.bp.blogspot.com/-ItKok4EIsnU/X0pq7Hkz8aI/AAAAAAAAE0g/LI0tD_HsvGcnHomig5g1WnDxlNoS5AaswCLcBGAsYHQ/s1600/Biodata%2Bdan%2BProfil%2BAmanda%2BRawles%2B%252814%2529.jpg"
+                    alt="" class="home_person_img">
+                  <p class="home_person_text fs-4 fw-bold fw-bold">Amanda<br>Rawles</p>
+                </div>
+              </a>
+            </div>
+            <div class="col my-4">
+              <a href="pdetail.php?id=1308">
+                <div class="home_person_image">
+                  <img src="https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2022/01/30/1177283006.jpg" alt=""
+                    class="home_person_img">
+                  <p class="home_person_text fs-4 fw-bold fw-bold">Prilly<br>Latuconsina</p>
+                </div>
+              </a>
+            </div>
+            <div class="col my-4">
+              <a href="pdetail.php?id=909">
+                <div class="home_person_image">
+                  <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2021/10/25/105907220.jpeg" alt=""
+                    class="home_person_img">
+                  <p class="home_person_text fs-4 fw-bold fw-bold">Jourdy<br>Pranata</p>
+                </div>
+              </a>
+            </div>
+            <div class="col my-4">
+              <a href="pdetail.php?id=152">
+                <div class="home_person_image">
+                  <img
+                    src="https://assets.jalantikus.com/assets/cache/720/720/userfiles/2021/11/04/film-angga-yunanda-7feaa.jpg"
+                    alt="" class="home_person_img">
+                  <p class="home_person_text fs-4 fw-bold fw-bold">Angga<br>Yunanda</p>
+                </div>
+              </a>
+            </div>
+            <div class="col my-4">
+              <a href="pdetail.php?id=1315">
+                <div class="home_person_image">
+                  <img
+                    src="https://cdn0-production-images-kly.akamaized.net/89CKBmfY0i7tObqYPInY1sbDfsM=/640x640/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2994551/original/041440700_1576203923-Sempat_Tak_Pede__Ini_Curhat_Dian_Sastro_dan_Putri_Marino_Soal__RambutAkuKataAku_2.jpg"
+                    alt="" class="home_person_img">
+                  <p class="home_person_text fs-4 fw-bold fw-bold">Putri<br>Marino</p>
+                </div>
+              </a>
+            </div>
+            <div class="col my-4">
+              <a href="pdetail.php?id=352">
+                <div class="home_person_image">
+                  <img
+                    src="https://cdn1-production-images-kly.akamaized.net/i9XEQZiEbkW3ikI_u18JSU5CRhc=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3591395/original/086532800_1633309433-chicco.jerikho_243484569_577920276806793_4526662582105781260_n.jpg"
+                    alt="" class="home_person_img">
+                  <p class="home_person_text fs-4 fw-bold fw-bold">Chicco<br>Jerikho</p>
+                </div>
+              </a>
+            </div>
+            <div class="col my-4">
+              <a href="pdetail.php?id=1471">
+                <div class="home_person_image">
+                  <img src="https://kuyou.id/content/images/ruben-20200916012751.jpg" alt="" class="home_person_img">
+                  <p class="home_person_text fs-4 fw-bold fw-bold">Ruben<br>Onsu</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <h1 class="text-center py-4">Cari Berdasarkan Genre</h1>
+        <div class="container-fluid">
+          <div class="row g-5">
+            <div class="col">
+              <a href="genre.php?id=laga">
+                <div class="card genre_card">
+                  <div class="card-body">
+                    <h5 class="card-title">Laga (Action)</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Bertarung memacu adrenalin!</h6>
+                    <p class="card-text">Perkelahian antara pahlawan dan penjahat. Biasanya bertujuan demi menyelamatkan
+                      dunia.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="genre.php?id=drama">
+                <div class="card genre_card">
+                  <div class="card-body">
+                    <h5 class="card-title">Drama</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Taruhan tinggi dan padat konflik!</h6>
+                    <p class="card-text">Mempertaruhkan apa yang penting untuk mereka, demi tujuan yang ingin dicapai.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="genre.php?id=komedi">
+                <div class="card genre_card">
+                  <div class="card-body">
+                    <h5 class="card-title">Komedi</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Ringan, lucu, dan menyenangkan!</h6>
+                    <p class="card-text">Jangan khawatir, sesedih apapun, film disini akan selalu memiliki akhir yang
+                      bahagia.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="genre.php?id=horor">
+                <div class="card genre_card">
+                  <div class="card-body">
+                    <h5 class="card-title">Horor</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Ketegangan yang mengancam!</h6>
+                    <p class="card-text">Siapkan jiwa dan mental saat menonton agar bisa bertahan sampai akhir.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="genre.php?id=musikal">
+                <div class="card genre_card">
+                  <div class="card-body">
+                    <h5 class="card-title">Musikal</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Musik dan film dipadukan!</h6>
+                    <p class="card-text">Lagu, dialog, dan tarian untuk membangkitkan humor, cinta, dan murka.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="genre.php?id=animasi">
+                <div class="card genre_card">
+                  <div class="card-body">
+                    <h5 class="card-title">Animasi</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Kartun dan ilustrasi!</h6>
+                    <p class="card-text">Seni gambar dan lukisan bergerak yang bisa mencakup semua genre lain.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="genre.php?id=seru">
+                <div class="card genre_card">
+                  <div class="card-body">
+                    <h5 class="card-title">Seru (Thriller)</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Horor realistis!</h6>
+                    <p class="card-text">Ketegangan, kegelisahan, keseruan, kejut, dan antisipasi yang berkelanjutan.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="genre.php?id=fantasi">
+                <div class="card genre_card">
+                  <div class="card-body">
+                    <h5 class="card-title">Fantasi</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Membebaskan imajinasi!</h6>
+                    <p class="card-text">Sihir, mitos, legenda, dan cerita rakyat yang diangkat menjadi nyata.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-white">
+    <div class="container p-4">
+      <section class="mb-4">
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-phone"></i></a>
+
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-envelope"></i></a>
+
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-twitter"></i></a>
+
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-instagram"></i></a>
+      </section>
+      <section class="mb-4">
+        <p>
+          Dunia Film adalah sebuah proyek situs basis data yang dikembangkan oleh Kelompok 1 - 2SIPA dari UIB.
+        </p>
+      </section>
+    </div>
+    <div class="text-center p-3" style="background-color: #680700;">
+      ©2022 Kelompok 1 - 2SIPA
+    </div>
+  </footer>
+
+
+  <!-- JS -->
+  <script type="module">
+    import { Toast } from 'bootstrap.esm.min.js'
+    Array.from(document.querySelectorAll('.toast'))
+      .forEach(toastNode => new Toast(toastNode))
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <script>
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+
+</html>

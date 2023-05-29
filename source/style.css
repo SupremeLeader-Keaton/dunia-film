@@ -1,0 +1,322 @@
+/* .text-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.text-medium {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.text-light {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+} */
+
+body {
+    background-color: rgb(237, 237, 237);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+
+nav,
+footer {
+    background-color: #A30D03;
+}
+
+.nav-pills .nav-link {
+    color: black !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff !important;
+    background-color: #A30D03 !important;
+}
+
+card {
+    background-color: rgb(237, 237, 237);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: inherit;
+}
+
+
+
+.home_card {
+    padding: 0 !important;
+    width: 15rem;
+    margin: 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25), 0 0 15px 0 rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.home_card:hover {
+    box-shadow: 0 0 15px 0 rgba(187, 12, 0, 0.388), 0 0 15px 0 rgba(187, 12, 0, 0.388);
+}
+
+.home_card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.home_card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 20rem;
+}
+
+.home_card .card_info {
+    color: #5e5c5c;
+}
+
+.home_card .card_info i {
+    font-size: 15px;
+}
+
+.home_person_image {
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 15px;
+    box-shadow: 0 0 25px 1px rgba(0, 0, 0, .3);
+    transition: .5s;
+    background-color: #555;
+    border-radius: 50%;
+}
+
+.home_person_image:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-140%, -50%);
+    background-color: rgb(183, 56, 56);
+    opacity: 0.8;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.home_person_image:hover:after {
+    transform: translate(-50%, -50%);
+}
+
+.home_person_image:hover .home_person_img {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.home_person_img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .8s;
+}
+
+.home_person_text {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-2000px, -50%);
+    color: #fff;
+    transition: .5s;
+    transition-timing-function: ease-in;
+    text-align: center;    
+}
+
+.home_person_image:hover .home_person_text {
+    transform: translate(-50%, -50%);
+    transition-timing-function: ease;
+}
+
+
+.genre_card {
+    padding: 0 !important;
+    width: 18rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25), 0 0 15px 0 rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.genre_card:hover {
+    box-shadow: 0 0 15px 0 rgba(187, 12, 0, 0.388), 0 0 15px 0 rgba(187, 12, 0, 0.388);
+}
+
+
+
+.film_card {
+    padding: 0 !important;
+    width: 20rem;
+    margin: 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25), 0 0 15px 0 rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.film_card:hover {
+    box-shadow: 0 0 15px 0 rgba(187, 12, 0, 0.388), 0 0 15px 0 rgba(187, 12, 0, 0.388);
+}
+
+.film_card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.film_card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 27rem;
+}
+
+.film_card .card_text {
+    height: 8rem;
+    color: #5e5c5c;
+}
+
+.film_card .card_info {
+    color: #5e5c5c;
+}
+
+.film_card .card_info i {
+    font-size: 15px;
+}
+
+
+
+
+.person_image {
+    overflow: hidden;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 15px;
+    box-shadow: 0 0 25px 1px rgba(0, 0, 0, .3);
+    transition: .5s;
+    background-color: #555;
+    border-radius: 50%;
+}
+
+.person_image:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-140%, -50%);
+    background-color: rgb(183, 56, 56);
+    opacity: 0.8;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.person_image:hover:after {
+    transform: translate(-50%, -50%);
+}
+
+.person_image:hover .person_img {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.person_img {
+    position: absolute;
+    /* height: 110%; */
+    height: 100%;
+    min-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .8s;
+}
+
+.person_text {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-2000px, -50%);
+    color: #fff;
+    transition: .5s;
+    transition-timing-function: ease-in;
+    text-align: center;    
+}
+
+.person_image:hover .person_text {
+    transform: translate(-50%, -50%);
+    transition-timing-function: ease;
+}
+
+
+
+#mySearchButton {
+    width: 7rem;
+}
+
+#mySearchForm {
+    width: 80rem;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    border-radius: 50%;
+    background-color: #A30D03;
+    color: white;
+    z-index: 99;
+}
+
+
+@media (max-width: 1025px) {
+    #mySearchForm {
+        width: 48rem;
+    }
+}
+
+@media (max-width: 769px) {
+    #mySearchButton {
+        width: 10rem;
+    }
+
+    #mySearchForm {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 427px) {
+    #mySearchForm {
+        width: 15rem;
+    }
+
+    #mySearchButtonText {
+        display: none;
+    }
+}
